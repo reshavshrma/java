@@ -58,11 +58,11 @@ class SY2022bit061 {
           	
           	// nanoTime
           	
-          	long finalTime1 = startTime1 - endTime1;
-          	long finalTime2 = startTime2 - endTime2;
-          	long finalTime3 = startTime3 - endTime3;
-          	long finalTime4 = startTime4 - endTime4;
-          	long finalTime5 = startTime5 - endTime5;
+          	long finalTime1 = endTime1 - startTime1;
+          	long finalTime2 = endTime2 - startTime2;
+          	long finalTime3 = endTime3 - startTime3;
+          	long finalTime4 = endTime4 - startTime4;
+          	long finalTime5 = endTime5 - startTime5;
           	
           	// final time 
           	System.out.println("\t" + finalTime1);
