@@ -1,28 +1,77 @@
+import java.util.Random;
+
 class SY2022bit061 {
 	String reg_no[] = {"2022bit061", "2022bcs100", "2022bch023", "2022bme056", "2022bit149"};
 	
 	public static void main(String[] args) {
+	
+		//long startTime = System.nanoTime();
+		
 		SY2022bit061 obj = new SY2022bit061();
 		
 		int validCount = obj.isValidRegistrationsCount();
 		System.out.println(validCount);
 		
+		// get approach 1 
+		long startTime1 = System.nanoTime();
 		long validCountLE50_approach1 = obj.isValidRegistrationsCountLE50_approach1();
 		System.out.println(validCountLE50_approach1);
+		long endTime1 = System.nanoTime();
 		
+		
+		// to get approach 2
+		long startTime2 = System.nanoTime();
 		long validCountLE50_approach2 = obj.isValidRegistrationsCountLE50_approach2();
-		System.out.println(validCountLE50_approach2);	
+		System.out.println(validCountLE50_approach2);
+		long endTime2 = System.nanoTime();
 		
+		
+		// to get approach 3
+		long startTime3 = System.nanoTime();
 		long validCountLE50_approach3 = obj.isValidRegistrationsCountLE50_approach3();
 		System.out.println(validCountLE50_approach3);	
-				
-
+		long endTime3 = System.nanoTime();
+		
+		
+		// to get approach 4
+		long startTime4 = System.nanoTime();
 		long validCountLE50_approach4 = obj.isValidRegistrationsCountLE50_approach4();
 		System.out.println(validCountLE50_approach4);	
+		long endTime4 = System.nanoTime();
 		
+		
+		// to get approach 5
+		long startTime5 = System.nanoTime();
 		long validCountLE50_approach5 = obj.isValidRegistrationsCountLE50_approach5();
 		System.out.println(validCountLE50_approach5);
+		long endTime5 =  System.nanoTime();
+		
+		
+		// to print 50_000 different random reg no's
+		
+       		int n = 5_00_000;
+        	Random random = new Random();	// used random class 
+        	for(int i = 0; i < n; i++) {
+            	int number = random.nextInt(5_00_000);
+           	System.out.println("Random String: " + "2022bit" + number);
+          	}
+          	
+          	// nanoTime
+          	
+          	long finalTime1 = startTime1 - endTime1;
+          	long finalTime2 = startTime2 - endTime2;
+          	long finalTime3 = startTime3 - endTime3;
+          	long finalTime4 = startTime4 - endTime4;
+          	long finalTime5 = startTime5 - endTime5;
+          	
+          	// final time 
+          	System.out.println("\t" + finalTime1);
+          	System.out.println("\t" + finalTime2);
+          	System.out.println("\t" + finalTime3);
+          	System.out.println("\t" + finalTime4);
+          	System.out.println("\t" + finalTime5);
 	}
+	
 	
 	// to check whether cse, it, mech, chem reg nos are valid
 	public int isValidRegistrationsCount() {
@@ -37,6 +86,7 @@ class SY2022bit061 {
 	
 	
 	// Approach 1 - to check reg no which is less than 50
+	
 	public long isValidRegistrationsCountLE50_approach1() {
 		long  validCount = 0;
 		for(long i = 0; i < reg_no.length; i++) {
@@ -48,6 +98,7 @@ class SY2022bit061 {
 		}
 		return validCount;
 	}
+	
 	
 	// approach 2 - to check reg no which is less than 50
 	public long isValidRegistrationsCountLE50_approach2() {
@@ -62,6 +113,7 @@ class SY2022bit061 {
 		return validCount;
 	}
 	
+	
 	// approach 3 - to check reg no which is less than 50
 	public long isValidRegistrationsCountLE50_approach3() {
 		long validCount = 0;
@@ -75,6 +127,7 @@ class SY2022bit061 {
 		return validCount;
 	}
 	
+	
         // approach 4 - to check reg no which is less than 50
 	public long isValidRegistrationsCountLE50_approach4() {
 		long validCount = 0;
@@ -87,7 +140,8 @@ class SY2022bit061 {
 		return validCount;
 	}
 	
-        // approach 5 - to check reg no which is less than 50
+	
+        // approach 5 - to check reg no which is less than 50    
 	public long isValidRegistrationsCountLE50_approach5() {
 		long validCount = 0;
 		for(long i = 0; i < reg_no.length; i++) {
