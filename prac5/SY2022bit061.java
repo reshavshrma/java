@@ -1,5 +1,3 @@
-import java.util.Random;
-
 class SY2022bit061 {
 	String reg_no[] = {"2022bit061", "2022bcs100", "2022bch023", "2022bme056", "2022bit149"};
 	
@@ -15,47 +13,33 @@ class SY2022bit061 {
 		// get approach 1 
 		long startTime1 = System.nanoTime();
 		long validCountLE50_approach1 = obj.isValidRegistrationsCountLE50_approach1();
-		System.out.println(validCountLE50_approach1);
 		long endTime1 = System.nanoTime();
-		
+		System.out.println(validCountLE50_approach1);
 		
 		// to get approach 2
 		long startTime2 = System.nanoTime();
 		long validCountLE50_approach2 = obj.isValidRegistrationsCountLE50_approach2();
-		System.out.println(validCountLE50_approach2);
 		long endTime2 = System.nanoTime();
-		
+		System.out.println(validCountLE50_approach2);
 		
 		// to get approach 3
 		long startTime3 = System.nanoTime();
 		long validCountLE50_approach3 = obj.isValidRegistrationsCountLE50_approach3();
-		System.out.println(validCountLE50_approach3);	
 		long endTime3 = System.nanoTime();
-		
+		System.out.println(validCountLE50_approach3);	
 		
 		// to get approach 4
 		long startTime4 = System.nanoTime();
 		long validCountLE50_approach4 = obj.isValidRegistrationsCountLE50_approach4();
-		System.out.println(validCountLE50_approach4);	
 		long endTime4 = System.nanoTime();
-		
+		System.out.println(validCountLE50_approach4);	
 		
 		// to get approach 5
 		long startTime5 = System.nanoTime();
 		long validCountLE50_approach5 = obj.isValidRegistrationsCountLE50_approach5();
-		System.out.println(validCountLE50_approach5);
 		long endTime5 =  System.nanoTime();
+		System.out.println(validCountLE50_approach5);
 		
-		
-		// to print 50_000 different random reg no's
-		
-       		int n = 5_00_000;
-        	Random random = new Random();	// used random class 
-        	for(int i = 0; i < n; i++) {
-            	int number = random.nextInt(5_00_000);
-           	System.out.println("Random String: " + "2022bit" + number);
-          	}
-          	
           	// nanoTime
           	
           	long finalTime1 = endTime1 - startTime1;
@@ -65,11 +49,13 @@ class SY2022bit061 {
           	long finalTime5 = endTime5 - startTime5;
           	
           	// final time 
-          	System.out.println("\t" + finalTime1);
-          	System.out.println("\t" + finalTime2);
-          	System.out.println("\t" + finalTime3);
-          	System.out.println("\t" + finalTime4);
-          	System.out.println("\t" + finalTime5);
+          	
+          	System.out.println("\n" + "Aprroaches" + "\t" + "Time" + "\n");
+          	System.out.println("Final Time 1" + "\t" + finalTime1);
+          	System.out.println("Final Time 2" + "\t" + finalTime2);
+          	System.out.println("Final Time 3" + "\t" + finalTime3);
+          	System.out.println("Final Time 4" + "\t" + finalTime4);
+          	System.out.println("Final Time 5" + "\t" + finalTime5);
 	}
 	
 	

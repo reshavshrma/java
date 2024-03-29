@@ -42,7 +42,7 @@ class Prime {
 			int z1 = obj.nonPrimeCount(arr, arr.length);
 			int z2 = 10_00_000 - z1;
 			long endTime4 = System.nanoTime();
-			long finalTime4 = endTime4 - startTime4;
+			long finalTime4 = endTime4 - startTime4;t
 			System.out.println("Final Time 4" + "\t" + finalTime4);	
 			j++;
 		}	
